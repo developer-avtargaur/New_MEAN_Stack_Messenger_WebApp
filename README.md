@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NewMessenger
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# New_MEAN_Stack_Messenger_WebApp
+My MEAN full-stack web messenger app re-built from scratch
+>>>>>>> 9b74e55a46332b7938b7d153de9d477c8a7e18a3
