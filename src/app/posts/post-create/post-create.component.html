@@ -1,0 +1,9 @@
+<h2>The Post Create Component</h2>
+<textarea name="text-input" id="1" cols="30" rows="10" [value]="newPost" #postInut>{{newPost}}</textarea>
+<hr>
+<button (click)="onAddPost(postInut)">Save Post</button>
+<p>{{newPost}}</p>
+
+<textarea name="text-input-two-way" id="2" cols="30" rows="6" [(ngModel)]="enteredValue" #postInutTwoWay>{{newPost}}</textarea>
+<button (click)="onAddPostTwoWay()">Save Post</button>
+<p>{{newPost}}</p>
