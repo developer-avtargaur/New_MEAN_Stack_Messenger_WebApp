@@ -1,9 +1,24 @@
 <h2>The Post Create Component</h2>
-<textarea name="text-input" id="1" cols="30" rows="10" [value]="newPost" #postInut>{{newPost}}</textarea>
-<hr>
-<button (click)="onAddPost(postInut)">Save Post</button>
-<p>{{newPost}}</p>
-
-<textarea name="text-input-two-way" id="2" cols="30" rows="6" [(ngModel)]="enteredValue" #postInutTwoWay>{{newPost}}</textarea>
-<button (click)="onAddPostTwoWay()">Save Post</button>
-<p>{{newPost}}</p>
+<!-->
+<mat-card>
+  <mat-form-field>
+    <textarea matInput name="text-input" id="1" cols="30" rows="10" [value]="newPost" #postInut>{{newPost}}</textarea>
+  </mat-form-field>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="onAddPost(postInut)">Save Post</button>
+</mat-card>
+<-->
+<mat-card>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="enteredTitle">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput name="text-input-two-way" id="2" cols="30" rows="6" [(ngModel)]="enteredContent" #postInutTwoWay></textarea>
+  </mat-form-field>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="onAddPostTwoWay()">Save Post</button>
+</mat-card>
