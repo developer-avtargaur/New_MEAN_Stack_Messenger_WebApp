@@ -11,14 +11,35 @@
 </mat-card>
 <-->
 <mat-card>
-  <mat-form-field>
-    <input matInput type="text" [(ngModel)]="enteredTitle">
-  </mat-form-field>
-  <mat-form-field>
-    <textarea matInput name="text-input-two-way" id="2" cols="30" rows="6" [(ngModel)]="enteredContent" #postInutTwoWay></textarea>
-  </mat-form-field>
-  <button
-    mat-raised-button
-    color="primary"
-    (click)="onAddPostTwoWay()">Save Post</button>
+  <form (submit)="onAddPostTwoWay(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="title"
+        ngModel
+        required
+        minlength="3"
+        placeholder="Post Title"
+        #title="ngModel">
+        <mat-error *ngIf="title.invalid">Please enter a post title!</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+        matInput
+        name="content"
+        id="2"
+        cols="30"
+        rows="6"
+        placeholder="Post Content"
+        ngModel
+        required
+        #content="ngModel"></textarea>
+        <mat-error *ngIf="content.invalid">Please enter content!</mat-error>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit">Save Post</button>
+  </form>
 </mat-card>
